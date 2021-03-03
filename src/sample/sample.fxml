@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.1937984496124031" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="389.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="706.0">
+         <children>
+            <Button fx:id="daybtn" layoutX="276.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#dayClicked" prefHeight="42.0" prefWidth="72.0" text="Day" />
+            <Button fx:id="hourbtn" layoutX="348.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#hourClicked" prefHeight="42.0" prefWidth="72.0" text="Hour" />
+            <Button fx:id="minbtn" layoutX="420.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#minClicked" prefHeight="42.0" prefWidth="72.0" text="Min" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="546.0">
+         <children>
+            <LineChart fx:id="chart" layoutX="14.0" layoutY="14.0" prefHeight="272.0" prefWidth="466.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
