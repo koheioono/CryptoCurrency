@@ -103,7 +103,7 @@ public class Controller implements Initializable {
                 c.setTime(d);
 
                 int am_pm = c.get(Calendar.AM_PM);
-                int hour_int = c.get(Calendar.HOUR) + 1;
+                int hour_int = c.get(Calendar.HOUR);
                 if (am_pm == 1 && hour_int != 0) {
                     hour_int += 12;
                 }
@@ -157,12 +157,18 @@ public class Controller implements Initializable {
                 c.setTime(d);
 
                 int am_pm = c.get(Calendar.AM_PM);
-                int hour_int = c.get(Calendar.HOUR) + 1;
+                int hour_int = c.get(Calendar.HOUR);
                 int min = c.get(Calendar.MINUTE);
                 if (am_pm == 1 && hour_int != 0) {
                     hour_int += 12;
                 }
-                String time = Integer.toString(hour_int) + ":" + Integer.toString(min);
+                String time = "";
+                if (min < 10) {
+                    time = Integer.toString(hour_int) + ":0" + Integer.toString(min);
+                } else {
+                    time = Integer.toString(hour_int) + ":" + Integer.toString(min);
+                }
+
 
                 String year = Integer.toString(c.get(Calendar.YEAR));
                 String month = Integer.toString(c.get(Calendar.MONTH) + 1);
